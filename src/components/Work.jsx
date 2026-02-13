@@ -11,7 +11,7 @@ const Work = () => {
       id: 1,
       title: 'NVIDIA Headquarters',
       category: 'Silicon Valley Visit',
-      year: '2024',
+      year: '2025',
       description: 'Explored the cutting edge of AI and GPU technology at NVIDIA, learning about how they\'re shaping the future of computing and artificial intelligence.',
       image: '/images/nvidia.jpg',
       position: '50% 50%'
@@ -20,7 +20,7 @@ const Work = () => {
       id: 2,
       title: 'Google San Francisco',
       category: 'Tech Immersion',
-      year: '2024',
+      year: '2025',
       description: 'Visited Google\'s San Francisco office with stunning views of the Bay Bridge, discovering how they\'re building products that impact billions of people.',
       image: '/images/google.jpg',
       position: 'center center'
@@ -29,7 +29,7 @@ const Work = () => {
       id: 3,
       title: 'Instagram / Meta',
       category: 'Social Innovation',
-      year: '2024',
+      year: '2025',
       description: 'Stepped inside Instagram\'s vibrant office space, exploring how social media platforms are designed to connect people worldwide.',
       image: '/images/instagram.jpg',
       position: '50% 60%'
@@ -38,7 +38,7 @@ const Work = () => {
       id: 4,
       title: 'PayPal Headquarters',
       category: 'Fintech Innovation',
-      year: '2024',
+      year: '2025',
       description: 'Visited PayPal\'s headquarters to understand how financial technology is revolutionizing the way people send and receive money globally.',
       image: '/images/paypal.jpg',
       position: '50% 35%'
@@ -47,7 +47,7 @@ const Work = () => {
       id: 5,
       title: 'OpenAI Conversations',
       category: 'AI & Future Tech',
-      year: '2024',
+      year: '2025',
       description: 'Had inspiring conversations with engineers working on the frontier of artificial intelligence, discussing how AI can make the world better.',
       image: '/images/openai.jpg',
       position: 'top center'
@@ -56,7 +56,7 @@ const Work = () => {
       id: 6,
       title: 'LinkedIn Product Team',
       category: 'Career & Networking',
-      year: '2024',
+      year: '2025',
       description: 'Connected with product managers at LinkedIn, learning about how they build features that help professionals grow their careers.',
       image: '/images/linkedin.jpg',
       position: '50% 25%'
@@ -74,7 +74,7 @@ const Work = () => {
     <section id="journey" className="section work" ref={sectionRef}>
       <div className="container">
         {/* Yale Section - FIRST */}
-        <motion.div 
+        <motion.div
           className="yale-section yale-first"
           initial={{ opacity: 0, y: 60 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -86,8 +86,8 @@ const Work = () => {
               <span className="section-subtitle">Full Scholarship · Summer 2025</span>
               <h3 className="yale-title">Yale Young Global Scholars</h3>
               <p className="yale-intro">
-                Selected among thousands of applicants worldwide, I spent two transformative 
-                weeks at Yale University exploring global challenges alongside brilliant minds 
+                Selected among thousands of applicants worldwide, I spent two transformative
+                weeks at Yale University exploring global challenges alongside brilliant minds
                 from every corner of the world.
               </p>
               <div className="yale-stats">
@@ -105,7 +105,7 @@ const Work = () => {
                 </div>
               </div>
             </div>
-            <motion.div 
+            <motion.div
               className="yale-hero-image"
               initial={{ opacity: 0, scale: 0.95, rotate: 6 }}
               animate={isInView ? { opacity: 1, scale: 1, rotate: 3 } : {}}
@@ -120,20 +120,20 @@ const Work = () => {
 
           {/* Bento Grid - Images + Text */}
           <div className="yale-bento">
-            <motion.div 
+            <motion.div
               className="yale-bento-item text-card"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <p>
-                Being selected as a Yale Young Global Scholar on a full scholarship was a 
+                Being selected as a Yale Young Global Scholar on a full scholarship was a
                 transformative experience. I lived and learned alongside extraordinary students—
                 future leaders, innovators, and changemakers who share my passion for making a difference.
               </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="yale-bento-item image-card"
               initial={{ opacity: 0, y: 30, rotate: 3 }}
               animate={isInView ? { opacity: 1, y: 0, rotate: 2 } : {}}
@@ -144,8 +144,8 @@ const Work = () => {
               </div>
               <span className="polaroid-caption">New friends</span>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="yale-bento-item image-card tall"
               initial={{ opacity: 0, y: 30, rotate: -2 }}
               animate={isInView ? { opacity: 1, y: 0, rotate: -1 } : {}}
@@ -156,8 +156,8 @@ const Work = () => {
               </div>
               <span className="polaroid-caption">Campus life</span>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="yale-bento-item image-card"
               initial={{ opacity: 0, y: 30, rotate: -3 }}
               animate={isInView ? { opacity: 1, y: 0, rotate: -2 } : {}}
@@ -168,16 +168,16 @@ const Work = () => {
               </div>
               <span className="polaroid-caption">Memories</span>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="yale-bento-item text-card accent"
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
               <p>
-                Together, we explored pressing global challenges—from climate change and AI to social 
-                justice. Late-night discussions, collaborative projects, and world-renowned professors 
+                Together, we explored pressing global challenges—from climate change and AI to social
+                justice. Late-night discussions, collaborative projects, and world-renowned professors
                 opened my eyes to perspectives I had never considered.
               </p>
               <span className="quote-mark">"</span>
@@ -185,7 +185,7 @@ const Work = () => {
           </div>
 
           {/* Bottom Quote */}
-          <motion.div 
+          <motion.div
             className="yale-quote"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
@@ -197,7 +197,7 @@ const Work = () => {
 
         {/* Silicon Valley Section */}
         <div id="silicon-valley">
-          <motion.div 
+          <motion.div
             className="work-header"
             initial={{ opacity: 0, y: 60 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -206,7 +206,7 @@ const Work = () => {
             <span className="section-subtitle">Silicon Valley Journey</span>
             <h2 className="section-title">Tech Companies Visited</h2>
             <p className="work-intro">
-              Conversations and experiences that elevated my curiosity about using AI and 
+              Conversations and experiences that elevated my curiosity about using AI and
               technology to make the world a better place.
             </p>
           </motion.div>
@@ -222,9 +222,9 @@ const Work = () => {
               transition={{ duration: 0.8, delay: 0.3 + 0.1 * i, ease: [0.16, 1, 0.3, 1] }}
             >
               <div className="experience-image">
-                <img 
-                  src={exp.image} 
-                  alt={exp.title} 
+                <img
+                  src={exp.image}
+                  alt={exp.title}
                   style={{ objectPosition: exp.position }}
                 />
               </div>
