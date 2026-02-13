@@ -1,0 +1,258 @@
+.moments {
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 0;
+}
+
+.moments-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.moments-gradient {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+}
+
+.moments .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.moments-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.moments-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-light);
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.moments-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.title-highlight {
+  font-style: italic;
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.moments-hint {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--gray-light);
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+
+/* Gallery - Draggable Polaroid Style */
+.moments-gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.moment-card {
+  position: absolute;
+  width: 260px;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 12px 12px 50px 12px;
+  cursor: grab;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.4),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.moment-card:active {
+  cursor: grabbing;
+}
+
+.moment-card:hover {
+  box-shadow: 
+    0 25px 70px rgba(0, 0, 0, 0.5),
+    0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.moment-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.moment-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.moment-caption-area {
+  padding-top: 12px;
+  text-align: center;
+}
+
+.moment-caption {
+  font-family: 'Caveat', cursive, Georgia, serif;
+  font-size: 1.2rem;
+  color: #333;
+  display: block;
+}
+
+/* CTA Section */
+.moments-cta {
+  text-align: center;
+  margin-top: 6rem;
+  padding-top: 4rem;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.cta-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-style: italic;
+  color: var(--gray-light);
+  margin-bottom: 2rem;
+}
+
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+  padding: 1.25rem 2.5rem;
+  border: 1px solid var(--white);
+  transition: all 0.3s ease;
+}
+
+.cta-link:hover {
+  background: var(--white);
+  color: var(--black);
+}
+
+.cta-link svg {
+  transition: transform 0.3s ease;
+}
+
+.cta-link:hover svg {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .moments-gallery {
+    min-height: 500px;
+  }
+
+  .moment-card {
+    width: 180px;
+    padding: 10px 10px 40px 10px;
+  }
+
+  .moment-caption {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .moments {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .moments-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .moment-card {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100%;
+    transform: rotate(0deg) !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .moments-hint {
+    display: none;
+  }
+
+  .moment-caption {
+    font-size: 0.95rem;
+  }
+
+  .moments-cta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .moments {
+    padding: 3rem 0;
+  }
+
+  .moments-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .moment-card {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 10px 10px 40px 10px;
+  }
+
+  .moment-caption {
+    font-size: 1rem;
+  }
+
+  .moments-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .cta-text {
+    font-size: 1.1rem;
+  }
+
+  .cta-link {
+    padding: 1rem 2rem;
+    font-size: 0.7rem;
+  }
+}
+

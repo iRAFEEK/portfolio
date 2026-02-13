@@ -1,0 +1,305 @@
+.passions {
+  background: linear-gradient(180deg, var(--black) 0%, var(--gray-dark) 50%, var(--black) 100%);
+}
+
+.passions-header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.passions-header .section-title {
+  margin-bottom: 0;
+}
+
+/* Passion Sections */
+.passion-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.passion-section:last-of-type {
+  border-bottom: none;
+}
+
+.passion-section.reverse {
+  direction: rtl;
+}
+
+.passion-section.reverse > * {
+  direction: ltr;
+}
+
+.passion-section-content {
+  padding: 1rem 0;
+}
+
+.passion-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--gray-light);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.passion-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.passion-section-text {
+  font-size: 1rem;
+  line-height: 1.9;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.passion-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.passion-tags span {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-light);
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gray-medium);
+  transition: all var(--transition-fast);
+}
+
+.passion-tags span:hover {
+  border-color: var(--white);
+  color: var(--white);
+}
+
+/* Passion Images - Polaroid Style */
+.passion-section-image {
+  max-width: 320px;
+  justify-self: end;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 12px 12px 50px 12px;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.passion-section-image:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.passion-section-image.wide {
+  max-width: 100%;
+}
+
+.passion-section-image .image-wrapper {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.passion-section-image.wide .image-wrapper {
+  aspect-ratio: 16/9;
+}
+
+.passion-section-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.passion-section-image:hover img {
+  transform: scale(1.05);
+}
+
+.image-caption {
+  display: block;
+  margin-top: 12px;
+  font-family: 'Caveat', cursive, Georgia, serif;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Jewelry Gallery - Polaroid Style */
+.passion-section-gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passion-section-gallery {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.passion-section-gallery img {
+  width: 180px;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 10px 10px 40px 10px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.passion-section-gallery img:nth-child(1) {
+  transform: rotate(-4deg);
+}
+
+.passion-section-gallery img:nth-child(2) {
+  transform: rotate(2deg) translateY(-10px);
+}
+
+.passion-section-gallery img:nth-child(3) {
+  transform: rotate(-2deg);
+}
+
+.passion-section-gallery img:hover {
+  transform: rotate(0deg) scale(1.05) translateY(-5px);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.passion-section-gallery-wrapper .image-caption {
+  margin-top: 2rem;
+  text-align: center;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 0.75rem 1.5rem;
+  color: #333;
+  font-family: 'Caveat', cursive, Georgia, serif;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* CS Icon Section */
+.passion-section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  border: 1px solid var(--gray-medium);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+.passion-section-icon span {
+  font-size: 6rem;
+  color: var(--gray-light);
+  font-family: monospace;
+  opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  .passion-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .passion-section.reverse {
+    direction: ltr;
+  }
+
+  .passion-section-image {
+    max-width: 320px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .passion-section-image.wide {
+    max-width: 100%;
+  }
+
+  .passion-section-gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .passion-section-gallery img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .passions-header {
+    margin-bottom: 3rem;
+  }
+
+  .passion-section {
+    padding: 2.5rem 0;
+  }
+
+  .passion-section-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+  }
+
+  .passion-section-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .passion-section-image {
+    max-width: 280px;
+  }
+
+  .passion-section-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .passion-section-gallery img {
+    width: 200px;
+    transform: none !important;
+  }
+
+  .passion-section-gallery img:nth-child(1),
+  .passion-section-gallery img:nth-child(2),
+  .passion-section-gallery img:nth-child(3) {
+    transform: none !important;
+  }
+
+  .passion-section-gallery img:hover {
+    transform: scale(1.02) !important;
+  }
+
+  .passion-tags {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .passion-section-image {
+    max-width: 260px;
+    padding: 10px 10px 40px 10px;
+  }
+
+  .passion-section-gallery img {
+    width: 180px;
+  }
+
+  .image-caption {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,569 @@
+.work {
+  background: var(--black);
+}
+
+.work-header {
+  margin-bottom: 5rem;
+  max-width: 700px;
+}
+
+.work-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--gray-light);
+  margin-top: 1.5rem;
+}
+
+/* Experiences Grid */
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.experience-card {
+  border: 1px solid var(--gray-medium);
+  background: rgba(255, 255, 255, 0.01);
+  transition: all var(--transition-medium);
+  overflow: hidden;
+}
+
+.experience-card:hover {
+  border-color: var(--gray-light);
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.experience-card:hover .experience-image img {
+  transform: scale(1.05);
+}
+
+.experience-image {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform var(--transition-medium);
+}
+
+.experience-content {
+  padding: 2rem;
+}
+
+.experience-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.experience-category {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-light);
+}
+
+.experience-year {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  color: var(--gray-light);
+}
+
+.experience-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.experience-description {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--gray-light);
+}
+
+/* Yale Section */
+.yale-section {
+  margin-top: 6rem;
+  padding-top: 6rem;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.yale-section.yale-first {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  margin-bottom: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+/* Yale Hero - Title + Featured Image */
+.yale-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: stretch;
+  margin-bottom: 3rem;
+}
+
+.yale-hero-content {
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yale-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+  line-height: 1.1;
+  background: linear-gradient(135deg, var(--white) 0%, var(--gray-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.yale-intro {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.yale-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.yale-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gray-light);
+}
+
+.yale-hero-image {
+  position: relative;
+  max-width: 320px;
+  margin-left: auto;
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 12px 12px 50px 12px;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.15);
+  transform: rotate(3deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.yale-hero-image:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.yale-hero-image .image-inner {
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.yale-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s ease;
+}
+
+.yale-hero-image:hover img {
+  transform: scale(1.05);
+}
+
+.yale-hero-image .polaroid-caption {
+  display: block;
+  margin-top: 12px;
+  font-family: 'Caveat', cursive, Georgia, serif;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Yale Bento Grid */
+.yale-bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+}
+
+.yale-bento-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.yale-bento-item:hover {
+  transform: translateY(-5px);
+}
+
+.yale-bento-item.text-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--gray-medium);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.yale-bento-item.text-card p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--accent);
+}
+
+.yale-bento-item.text-card.accent {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  position: relative;
+}
+
+.yale-bento-item.text-card .quote-mark {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+}
+
+.yale-bento-item.image-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f5f5f5 100%);
+  padding: 10px 10px 40px 10px;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.25),
+    0 3px 10px rgba(0, 0, 0, 0.15);
+  overflow: visible;
+}
+
+.yale-bento-item.image-card.tall {
+  grid-row: span 2;
+}
+
+.yale-bento-item.image-card:hover {
+  transform: rotate(-1deg) scale(1.02);
+  box-shadow: 
+    0 15px 40px rgba(0, 0, 0, 0.35),
+    0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.yale-bento-item.image-card .image-inner {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: #e0e0e0;
+}
+
+.yale-bento-item.image-card.tall .image-inner {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.yale-bento-item.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.yale-bento-item.image-card .polaroid-caption {
+  display: block;
+  margin-top: 10px;
+  font-family: 'Caveat', cursive, Georgia, serif;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  transition: transform 0.5s ease;
+}
+
+.yale-bento-item.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Bento Grid Layout */
+.yale-bento-item:nth-child(1) { grid-column: span 2; }
+.yale-bento-item:nth-child(2) { grid-column: span 1; }
+.yale-bento-item:nth-child(3) { grid-column: span 1; grid-row: span 2; }
+.yale-bento-item:nth-child(4) { grid-column: span 1; }
+.yale-bento-item:nth-child(5) { grid-column: span 2; }
+
+/* Yale Quote */
+.yale-quote {
+  margin-top: 3rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--gray-medium);
+  border-bottom: 1px solid var(--gray-medium);
+}
+
+.yale-quote p {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--white);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+.gallery-section {
+  margin-top: 6rem;
+  padding-top: 6rem;
+  border-top: 1px solid var(--gray-medium);
+}
+
+.gallery-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 350px;
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border: 1px solid var(--gray-medium);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transition: transform var(--transition-medium);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item.large {
+  grid-row: span 1;
+}
+
+@media (max-width: 1024px) {
+  .experiences-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .yale-hero {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .yale-hero-content {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .yale-stats {
+    justify-content: center;
+  }
+
+  .yale-hero-image {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .yale-bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yale-bento-item:nth-child(1) { grid-column: span 2; }
+  .yale-bento-item:nth-child(2) { grid-column: span 1; }
+  .yale-bento-item:nth-child(3) { grid-column: span 1; grid-row: span 1; }
+  .yale-bento-item:nth-child(4) { grid-column: span 1; }
+  .yale-bento-item:nth-child(5) { grid-column: span 2; }
+
+  .yale-bento-item.image-card.tall {
+    grid-row: span 1;
+    aspect-ratio: 1;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 250px;
+  }
+
+  .gallery-item.large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-header {
+    margin-bottom: 3rem;
+  }
+
+  .work-intro {
+    font-size: 1rem;
+  }
+
+  .experiences-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .experience-content {
+    padding: 1.5rem;
+  }
+
+  .experience-title {
+    font-size: 1.25rem;
+  }
+
+  .yale-section.yale-first {
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .yale-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .yale-intro {
+    font-size: 0.95rem;
+  }
+
+  .yale-hero-image {
+    max-width: 260px;
+    padding: 10px 10px 40px 10px;
+  }
+
+  .yale-bento {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .yale-bento-item:nth-child(1),
+  .yale-bento-item:nth-child(2),
+  .yale-bento-item:nth-child(3),
+  .yale-bento-item:nth-child(4),
+  .yale-bento-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .yale-bento-item.image-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .yale-bento-item.text-card {
+    padding: 1.5rem;
+  }
+
+  .yale-bento-item.text-card p {
+    font-size: 0.9rem;
+  }
+
+  .yale-stats {
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .yale-quote p {
+    font-size: 1.1rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 250px);
+  }
+
+  .gallery-item.large {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-image {
+    aspect-ratio: 16/9;
+  }
+
+  .experience-content {
+    padding: 1.25rem;
+  }
+
+  .experience-title {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .experience-description {
+    font-size: 0.8rem;
+  }
+
+  .yale-hero-image {
+    max-width: 240px;
+  }
+
+  .yale-bento-item.image-card {
+    max-width: 260px;
+    padding: 8px 8px 35px 8px;
+  }
+
+  .yale-stats {
+    gap: 1rem 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+  }
+}
